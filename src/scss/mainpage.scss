@@ -1,0 +1,19 @@
+
+@import "base/base";
+
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    background-color: $main-color-1;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+*::after,*::before {
+    margin: 0;
+    padding: 0;
+}

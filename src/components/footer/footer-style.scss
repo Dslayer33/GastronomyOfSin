@@ -1,0 +1,30 @@
+.footer-container {
+    margin-top: 2rem;
+    height: 20rem;
+    background-color: #091625;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .footer-title {
+        font-family: "Protest Revolution", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: #DEBBA6;
+    }
+
+    .footer-link {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Inria Serif', serif;
+        color: #DEBBA6;
+
+        .link-author {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+}

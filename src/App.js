@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/headerModule';
+import Main from './components/main/mainModule';
+import Footer from './components/footer/footerModule';
+import PizzaRoute from './routes/pizza_route/pizzaRouteModule';
+import SushiRoute from './routes/sushi_route/sushiRouteModule';
+import {Routes,Route} from 'react-router-dom';
+import './scss/mainpage.scss';
 
 function App() {
+
+  const homePage = [<Header/>,<Main/>,<Footer/>];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Routes>
+            <Route  path='/' element={homePage}/>
+            <Route  path='pizza' element={<PizzaRoute />} />
+            <Route  path='sushi' element={<SushiRoute />} />
+       </Routes>
     </div>
   );
 }

@@ -1,0 +1,100 @@
+.test-block {
+    color:#091625;
+    //font-family:  'Inria Serif', serif;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.header-main-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #091625;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 1rem;
+
+        &:hover {
+            box-shadow: 10px 5px 5px #091625;
+        }
+
+        .header-icon {
+            justify-self: center;
+            align-self: center;
+        }
+
+        .icon-title {
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 2rem;
+            color: #091625;
+        }
+    }
+
+
+    &__nav {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        align-items: center;
+        box-shadow: 0 0 3px 1px #091625;
+        border-radius: 5px;
+
+        .header-nav-link {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Inria Serif', serif;
+            color: #091625;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .shop-items {
+            display: flex;
+        }
+
+        .nav-icon {
+            cursor: pointer;
+            animation: all .1s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .items-calc {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: none;
+            background-color: #091625;
+            align-self: center;
+
+            .calc-cont {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .calc-content {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #DEBBA6;
+                }
+            }
+        }
+    }
+}

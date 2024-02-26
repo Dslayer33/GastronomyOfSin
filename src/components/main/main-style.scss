@@ -1,0 +1,79 @@
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 3rem;
+    height: 70rem;
+
+    &__block {
+        width: 35rem;
+        height: 30rem;
+        border-radius: 10px;
+        position: relative;
+        background-color: #091625;
+
+        .block-content {
+            width: 75%;
+            height: 25rem;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            clip-path: circle(50% at 50% 50%);
+           
+
+            .content-area {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .area-img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .area-btn {
+                    display: none;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    text-transform: uppercase;
+                    height: 8rem;
+                    width: 12rem;
+                    border-radius: 20px;
+                    border: 2px solid #091625;
+                    background-color: #DEBBA6;
+                    color: #091625;
+                    font-size: 2rem;
+                    font-family: 'Inria Serif', serif;
+                    font-weight: 700;
+                    cursor: pointer;
+                    align-items: center;
+                }
+            }
+
+            &:hover  .area-img {
+                filter: blur(3px);
+            }
+
+            &:hover  .area-btn {
+                display: flex;
+                flex-direction: column;
+                animation-name: blink;
+                animation-duration: .2s;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    from {
+       margin-top: 2rem;
+    } to {
+       margin-top: 0;
+    }
+}
